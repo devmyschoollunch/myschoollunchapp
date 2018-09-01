@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
-import PartsLogin from "../parts/login";
-
+import PartsSignin from "../parts/signin";
 
 class PagesHome extends Component {
   state = {};
@@ -16,22 +15,9 @@ class PagesHome extends Component {
               contents, the creator, etc. Make it short and sweet, but not too
               short so folks don't simply skip over it entirely.
             </p>
-            <p>
-              <a href="#" className="btn btn-primary btn-lg m-2">
-                Login
-              </a>
-              </p>
-              <p>
-                
-              <a href="#" className="btn btn-secondary btn-sm m-2">
-                Register
-              </a>
-            </p>
           </div>
         </section>
-        {/* <PartsLogin /> */}
-
-
+        <PartsSignin />
       </div>
     );
   }
