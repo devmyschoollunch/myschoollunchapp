@@ -1,26 +1,23 @@
 import React, { Component } from "react";
-// import Pricing from "../parts/pricing";
-// import About from "../pages/about";
-// import Terms from "../pages/terms";
-// import Checkout from "../parts/checkout";
-// import Register from "../auth/register";
-// import Counters from "../Demo/counters";
-import PublicLogin from "../public/login";
+import PagesHome from "../pages/home";
+import PagesAbout from "../pages/about";
+import PagesContactUs from "../pages/contactUs";
+import PagesTerms from "../pages/terms";
+import PagesProducts from "../pages/products";
 
-class Body extends Component {
+class LayoutBody extends Component {
+ 
   render() {
     return (
       <div>
-      {/* <Counters /> */}
-        {/* <Register /> */}
-        <PublicLogin />
-        {/* <Pricing />
-        <About />
-        <Checkout />
-        <Terms /> */}
+        <PagesHome />
+        <PagesProducts />
+        <PagesAbout />
+        <PagesContactUs />
+        <PagesTerms />
       </div>
     );
   }
 }
 
-export default Body;
+export default LayoutBody;

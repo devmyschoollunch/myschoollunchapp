@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
-import Footer from "./components/layout/footer";
-import Header from "./components/layout/header";
-import Body from "./components/layout/body";
+import LayoutHeader from "./components/layout/header";
+import LayoutFooter from "./components/layout/footer";
+import LayoutBody from "./components/layout/body";
 class App extends Component {
+   
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.value !== this.props.value) {
       // ajax call, get more data
@@ -12,9 +13,9 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        {/* <Header /> */}
-        <Body />
-        {/* <Footer /> */}
+        {/* <LayoutHeader /> */}
+        <LayoutBody />
+        {/* <LayoutFooter /> */}
       </div>
     );
   }

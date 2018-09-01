@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
 
-class About extends Component {
+class PagesAbout extends Component {
   render() {
     return (
       <div id="about">
@@ -100,4 +100,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default PagesAbout;

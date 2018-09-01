@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
 
-class Terms extends Component {
+class PagesTerms extends Component {
   render() {
     return (
       <div id="terms">
@@ -328,4 +328,4 @@ class Terms extends Component {
   }
 }
 
-export default Terms;
+export default PagesTerms;

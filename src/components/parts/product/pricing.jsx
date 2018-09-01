@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Pricing extends Component {
+class PartsProductPricing extends Component {
   componentDidMount() {
     // myfunction();
     // alert("price");
@@ -90,4 +90,4 @@ class Pricing extends Component {
   }
 }
 
-export default Pricing;
+export default PartsProductPricing;

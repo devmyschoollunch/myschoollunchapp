@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-class Checkout extends Component {
+class PartsProductCheckout extends Component {
   render() {
     return (
       <div id="Checkout">
@@ -339,4 +339,4 @@ class Checkout extends Component {
   }
 }
 
-export default Checkout;
+export default PartsProductCheckout;

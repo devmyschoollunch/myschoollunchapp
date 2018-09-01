@@ -17,7 +17,7 @@ npm install jquery
 npm install popper.js --save
 
 
-npm i react-router-dom 
+npm i react-router-dom
  
 import "jquery/dist/jquery.min.js";
 import "bootstrap/dist/js/bootstrap.min.js";
