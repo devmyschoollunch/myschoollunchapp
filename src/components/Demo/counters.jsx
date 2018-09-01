@@ -21,7 +21,7 @@ class Counters extends Component {
     this.setState({ counters });
   };
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.value !== thist.props.value) {
+    if (prevProps.value !== this.props.value) {
       // ajax call, get more data
     }
   }

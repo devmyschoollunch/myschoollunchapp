@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Pricing from "../parts/pricing";
-import Login from "../auth/login";
-import About from "../pages/about";
-import Terms from "../pages/terms";
-import Checkout from "../parts/checkout";
-import Register from "../auth/register";
-import Counters from "../Demo/counters";
+// import Pricing from "../parts/pricing";
+// import About from "../pages/about";
+// import Terms from "../pages/terms";
+// import Checkout from "../parts/checkout";
+// import Register from "../auth/register";
+// import Counters from "../Demo/counters";
+import PublicLogin from "../public/login";
 
 class Body extends Component {
   render() {
@@ -13,7 +13,7 @@ class Body extends Component {
       <div>
       {/* <Counters /> */}
         {/* <Register /> */}
-        <Login />
+        <PublicLogin />
         {/* <Pricing />
         <About />
         <Checkout />
