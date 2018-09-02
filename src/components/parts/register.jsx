@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import $ from "jquery";
-import CommonBuildParams from "../../scripts/main";
+import CommonBuildParams from "../../scripts/JSmain";
+import PartsCommonUSStates from "../parts/common/usStates";
 
 class PartsRegister extends Component {
   constructor(props) {
@@ -24,8 +25,9 @@ class PartsRegister extends Component {
       fm: s.firstName
     };
 
-    var param = CommonBuildParams(items);
-    $.post("http://localhost:60769/Home/About?data=" + JSON.stringify(param));
+    var data = CommonBuildParams(items);
+
+    $.post("http://localhost:60769/Home/About?data=" + JSON.stringify(data));
   }
 
   render() {
@@ -53,123 +55,76 @@ class PartsRegister extends Component {
                   onChange={this.handleChange}
                   className="form-control"
                   id="firstName"
-                  placeholder=""
-                  required=""
+                  placeholder="First name"
                   type="text"
+                  maxlength="100"
                 />
-                <div className="invalid-feedback">
-                  Valid first name is required.
-                </div>
               </div>
               <div className="col-md-6 mb-3">
-                <label htmlFor="lastName">Last name</label>
                 <input
                   value={this.state.value}
                   onChange={this.handleChange}
                   className="form-control"
-                  id="lastName"
-                  placeholder=""
-                  required=""
+                  placeholder="Last name"
                   type="text"
+                  maxlength="100"
                 />
-                <div className="invalid-feedback">
-                  Valid last name is required.
-                </div>
               </div>
             </div>
 
             <div className="mb-3">
-              <label htmlFor="username">Username</label>
               <div className="input-group">
                 <input
                   className="form-control"
                   id="username"
-                  placeholder=""
-                  required=""
+                  placeholder="Username"
                   type="text"
+                  maxlength="100"
                 />
-                <div className="invalid-feedback" styleName="width: 100%;">
-                  Your username is required.
-                </div>
               </div>
             </div>
 
             <div className="mb-3">
-              <label htmlFor="email">Email</label>
               <input
                 className="form-control"
-                id="email"
-                placeholder=""
+                placeholder="Email"
                 type="email"
+                maxlength="100"
               />
-              <div className="invalid-feedback">
-                Please enter a valid email.
-              </div>
             </div>
 
             <div className="mb-3">
-              <label htmlFor="address">Address</label>
               <input
                 className="form-control"
-                id="address"
-                placeholder=""
-                required=""
+                placeholder="Address"
                 type="text"
+                maxlength="50"
               />
-              <div className="invalid-feedback">Please enter your address.</div>
             </div>
 
             <div className="mb-3">
-              <label htmlFor="address2">
-                Address 2 <span className="text-muted">(Optional)</span>
-              </label>
               <input
                 className="form-control"
-                id="address2"
-                placeholder=""
+                placeholder="P.O. Box/Apt #"
                 type="text"
+                maxlength="50"
               />
             </div>
 
             <div className="row">
-              <div className="col-md-5 mb-3">
-                <label htmlFor="country">Country</label>
-                <select
-                  className="custom-select d-block w-100"
-                  id="country"
-                  required=""
-                >
-                  <option value="">Choose...</option>
-                  <option>United States</option>
-                </select>
-                <div className="invalid-feedback">
-                  Please select a valid country.
-                </div>
-              </div>
               <div className="col-md-4 mb-3">
-                <label htmlFor="state">State</label>
-                <select
-                  className="custom-select d-block w-100"
-                  id="state"
-                  required=""
-                >
-                  <option value="">Choose...</option>
-                  <option>California</option>
-                </select>
+                <PartsCommonUSStates />
                 <div className="invalid-feedback">
                   Please provide a valid state.
                 </div>
               </div>
               <div className="col-md-3 mb-3">
-                <label htmlFor="zip">Zip</label>
                 <input
                   className="form-control"
-                  id="zip"
-                  placeholder=""
-                  required=""
+                  placeholder="Zip code"
                   type="text"
+                  maxlength="50"
                 />
-                <div className="invalid-feedback">Zip code required.</div>
               </div>
             </div>
           </div>
