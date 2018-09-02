@@ -6,13 +6,6 @@ class PartsSignin extends Component {
     return (
       <div>
         <form className="form-signin">
-          <img
-            className="mb-4"
-            src="../../assets/brand/bootstrap-solid.svg"
-            alt=""
-            width="72"
-            height="72"
-          />
           <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
           <label for="inputEmail" className="sr-only">
             Email address
@@ -37,6 +30,7 @@ class PartsSignin extends Component {
           />
           <div className="checkbox mb-3">
             <label>
+              {" "}
               <input type="checkbox" value="remember-me" /> Remember me
             </label>
           </div>
@@ -44,10 +38,10 @@ class PartsSignin extends Component {
           <button className="btn btn-lg btn-primary btn-block" type="submit">
             Sign in
           </button>
-        <p></p>
-           <a href="#" className="btn btn-secondary btn-sm m-2">
-                New? Register >>
-              </a>
+          <p />
+          <a href="#" className="btn btn-secondary btn-sm m-2">
+            New? Register >>
+          </a>
         </form>
       </div>
     );

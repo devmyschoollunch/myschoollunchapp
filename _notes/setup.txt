@@ -2,7 +2,7 @@
 npm i -g create-react-app
 
 
-"editor.formatOnSave" : true,"
+"editor.formatOnSave" : true,
 
 
 create-react-app PROJECTNAME

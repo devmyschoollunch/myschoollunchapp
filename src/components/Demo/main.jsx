@@ -1,27 +1,26 @@
 import React, { Component } from "react";
 import $ from "jquery";
-import ListItem from "../../../parts/listItems";
-import Counters from "../../../parts/counters";
+import ListItem from "../parts/listItems";
+import Counters from "../parts/counters";
 class Main extends Component {
   state = {
     count: 0,
     // imageURL: "https://picsum.photos/200",
-    tags: ["tag1", "tag2", "tag3", "tag4"],
+    tags: ["tag1", "tag2", "tag3", "tag4"]
   };
   constructor(props) {
     super(props);
     //this._handleClick = this._handleClick.bind(this);
-    
+
     this.state = {
-      isLoading: true,//https://www.youtube.com/watch?v=VwiZBveJhq4&t=72s
-      conctacts : []
-    }
+      isLoading: true, //https://www.youtube.com/watch?v=VwiZBveJhq4&t=72s
+      conctacts: []
+    };
   }
   componentDidMount() {
     this._fecthData();
   }
 
-  
   _fecthData() {
     $.ajax({
       url: "https://randomuser.me/api/?results=5",
@@ -57,8 +56,6 @@ class Main extends Component {
     return _return;
   }
 
-
-
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.value !== thist.props.value) {
       // ajax call, get more data
@@ -76,7 +73,6 @@ class Main extends Component {
 
     //console.log("clicked", this);
   };
-
 
   _hasData() {
     if (this.state.tags.length === 0) {

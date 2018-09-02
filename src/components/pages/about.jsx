@@ -10,10 +10,10 @@ class PagesAbout extends Component {
         </Router>
 
         <div>
-          <h1 class="bd-title" id="content">
+          <h1 className="bd-title" id="content">
             About
           </h1>
-          <p class="bd-lead">
+          <p className="bd-lead">
             Learn more about the team maintaining Bootstrap, how and why the
             project started, and how to get involved.
           </p>
@@ -60,8 +60,7 @@ class PagesAbout extends Component {
             <a href="https://blog.twitter.com/developer/en_us/a/2011/bootstrap-twitter.html">
               released
             </a>{" "}
-            on <time datetime="2011-08-19 11:25">Friday, August 19, 2011</time>,
-            we’ve since had over{" "}
+            on Friday, August 19, 2011, we’ve since had over{" "}
             <a href="https://github.com/twbs/bootstrap/releases">
               twenty releases
             </a>
