@@ -19,7 +19,6 @@ class PartsRegister extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-
   handleSubmit(e) {
     const s = this.state;
     e.preventDefault();
@@ -202,8 +201,6 @@ class PartsRegister extends Component {
                   <option value="WI">Wisconsin</option>
                   <option value="WY">Wyoming</option>
                 </select>
-
-
               </div>
               <div className="col-md-3 mb-3">
                 <input
@@ -224,8 +221,6 @@ class PartsRegister extends Component {
       </div>
     );
   }
-
-
 }
 
 export default PartsRegister;
