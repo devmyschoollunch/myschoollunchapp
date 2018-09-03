@@ -75,7 +75,7 @@ class PartsRegister extends Component {
                   className="form-control"
                   placeholder="First name"
                   type="text"
-                  maxlength="100"
+                  maxLength="100"
                 />
               </div>
               <div className="col-md-6 mb-3">
@@ -85,7 +85,7 @@ class PartsRegister extends Component {
                   className="form-control"
                   placeholder="Last name"
                   type="text"
-                  maxlength="100"
+                  maxLength="100"
                 />
               </div>
             </div>
@@ -98,7 +98,7 @@ class PartsRegister extends Component {
                   className="form-control"
                   placeholder="Username"
                   type="text"
-                  maxlength="100"
+                  maxLength="100"
                 />
               </div>
             </div>
@@ -110,7 +110,7 @@ class PartsRegister extends Component {
                 className="form-control"
                 placeholder="Email"
                 type="email"
-                maxlength="100"
+                maxLength="100"
               />
             </div>
 
@@ -121,7 +121,7 @@ class PartsRegister extends Component {
                 className="form-control"
                 placeholder="Address"
                 type="text"
-                maxlength="50"
+                maxLength="50"
               />
             </div>
 
@@ -132,7 +132,7 @@ class PartsRegister extends Component {
                 className="form-control"
                 placeholder="P.O. Box / Apt #"
                 type="text"
-                maxlength="50"
+                maxLength="50"
               />
             </div>
 
@@ -209,7 +209,7 @@ class PartsRegister extends Component {
                   className="form-control"
                   placeholder="Zip code"
                   type="text"
-                  maxlength="50"
+                  maxLength="50"
                 />
               </div>
             </div>

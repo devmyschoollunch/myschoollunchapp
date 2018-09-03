@@ -70,10 +70,10 @@ class PartsProductCheckout extends Component {
           </div>
           <div className="col-md-8 order-md-1">
             <h4 className="mb-3">Billing address</h4>
-            <form className="needs-validation" novalidate="">
+            <form className="needs-validation" noValidate="">
               <div className="row">
                 <div className="col-md-6 mb-3">
-                  <label for="firstName">First name</label>
+                  <label htmlFor="firstName">First name</label>
                   <input
                     className="form-control"
                     id="firstName"
@@ -87,7 +87,7 @@ class PartsProductCheckout extends Component {
                   </div>
                 </div>
                 <div className="col-md-6 mb-3">
-                  <label for="lastName">Last name</label>
+                  <label htmlFor="lastName">Last name</label>
                   <input
                     className="form-control"
                     id="lastName"
@@ -103,7 +103,7 @@ class PartsProductCheckout extends Component {
               </div>
 
               <div className="mb-3">
-                <label for="username">Username</label>
+                <label htmlFor="username">Username</label>
                 <div className="input-group">
                   <div className="input-group-prepend">
                     <span className="input-group-text">@</span>
@@ -115,14 +115,14 @@ class PartsProductCheckout extends Component {
                     required=""
                     type="text"
                   />
-                  <div className="invalid-feedback" styleName="width: 100%;">
+                  <div className="invalid-feedback" stylename="width: 100%;">
                     Your username is required.
                   </div>
                 </div>
               </div>
 
               <div className="mb-3">
-                <label for="email">
+                <label htmlFor="email">
                   Email <span className="text-muted">(Optional)</span>
                 </label>
                 <input
@@ -137,7 +137,7 @@ class PartsProductCheckout extends Component {
               </div>
 
               <div className="mb-3">
-                <label for="address">Address</label>
+                <label htmlFor="address">Address</label>
                 <input
                   className="form-control"
                   id="address"
@@ -151,7 +151,7 @@ class PartsProductCheckout extends Component {
               </div>
 
               <div className="mb-3">
-                <label for="address2">
+                <label htmlFor="address2">
                   Address 2 <span className="text-muted">(Optional)</span>
                 </label>
                 <input
@@ -164,7 +164,7 @@ class PartsProductCheckout extends Component {
 
               <div className="row">
                 <div className="col-md-5 mb-3">
-                  <label for="country">Country</label>
+                  <label htmlFor="country">Country</label>
                   <select
                     className="custom-select d-block w-100"
                     id="country"
@@ -178,7 +178,7 @@ class PartsProductCheckout extends Component {
                   </div>
                 </div>
                 <div className="col-md-4 mb-3">
-                  <label for="state">State</label>
+                  <label htmlFor="state">State</label>
                   <select
                     className="custom-select d-block w-100"
                     id="state"
@@ -192,7 +192,7 @@ class PartsProductCheckout extends Component {
                   </div>
                 </div>
                 <div className="col-md-3 mb-3">
-                  <label for="zip">Zip</label>
+                  <label htmlFor="zip">Zip</label>
                   <input
                     className="form-control"
                     id="zip"
@@ -210,7 +210,7 @@ class PartsProductCheckout extends Component {
                   id="same-address"
                   type="checkbox"
                 />
-                <label className="custom-control-label" for="same-address">
+                <label className="custom-control-label" htmlFor="same-address">
                   Shipping address is the same as my billing address
                 </label>
               </div>
@@ -220,7 +220,7 @@ class PartsProductCheckout extends Component {
                   id="save-info"
                   type="checkbox"
                 />
-                <label className="custom-control-label" for="save-info">
+                <label className="custom-control-label" htmlFor="save-info">
                   Save this information for next time
                 </label>
               </div>
@@ -238,7 +238,7 @@ class PartsProductCheckout extends Component {
                     required=""
                     type="radio"
                   />
-                  <label className="custom-control-label" for="credit">
+                  <label className="custom-control-label" htmlFor="credit">
                     Credit card
                   </label>
                 </div>
@@ -250,7 +250,7 @@ class PartsProductCheckout extends Component {
                     required=""
                     type="radio"
                   />
-                  <label className="custom-control-label" for="debit">
+                  <label className="custom-control-label" htmlFor="debit">
                     Debit card
                   </label>
                 </div>
@@ -262,14 +262,14 @@ class PartsProductCheckout extends Component {
                     required=""
                     type="radio"
                   />
-                  <label className="custom-control-label" for="paypal">
+                  <label className="custom-control-label" htmlFor="paypal">
                     PayPal
                   </label>
                 </div>
               </div>
               <div className="row">
                 <div className="col-md-6 mb-3">
-                  <label for="cc-name">Name on card</label>
+                  <label htmlFor="cc-name">Name on card</label>
                   <input
                     className="form-control"
                     id="cc-name"
@@ -285,7 +285,7 @@ class PartsProductCheckout extends Component {
                   </div>
                 </div>
                 <div className="col-md-6 mb-3">
-                  <label for="cc-number">Credit card number</label>
+                  <label htmlFor="cc-number">Credit card number</label>
                   <input
                     className="form-control"
                     id="cc-number"
@@ -300,7 +300,7 @@ class PartsProductCheckout extends Component {
               </div>
               <div className="row">
                 <div className="col-md-3 mb-3">
-                  <label for="cc-expiration">Expiration</label>
+                  <label htmlFor="cc-expiration">Expiration</label>
                   <input
                     className="form-control"
                     id="cc-expiration"
@@ -313,7 +313,7 @@ class PartsProductCheckout extends Component {
                   </div>
                 </div>
                 <div className="col-md-3 mb-3">
-                  <label for="cc-cvv">CVV</label>
+                  <label htmlFor="cc-cvv">CVV</label>
                   <input
                     className="form-control"
                     id="cc-cvv"

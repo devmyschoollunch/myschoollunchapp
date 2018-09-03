@@ -6,7 +6,7 @@ import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
 
 class PagesContactUs extends Component {
   validate(value) {
-    // alert("yo");
+    // alert("yo");r
 
     return false;
   }
@@ -22,7 +22,7 @@ class PagesContactUs extends Component {
 
         <form>
           <div className="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
+            <label htmlFor="exampleFormControlInput1">Email address</label>
             <input
               type="email"
               className="form-control"
@@ -31,7 +31,7 @@ class PagesContactUs extends Component {
             />
           </div>
           <div className="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
+            <label htmlFor="exampleFormControlSelect1">Example select</label>
             <select className="form-control" id="exampleFormControlSelect1">
               <option>1</option>
               <option>2</option>
@@ -41,7 +41,7 @@ class PagesContactUs extends Component {
             </select>
           </div>
           <div className="form-group">
-            <label for="exampleFormControlSelect2">
+            <label htmlFor="exampleFormControlSelect2">
               Example multiple select
             </label>
             <select
@@ -57,14 +57,14 @@ class PagesContactUs extends Component {
             </select>
           </div>
           <div className="form-group">
-            <label for="exampleFormControlTextarea1">Example textarea</label>
+            <label htmlFor="exampleFormControlTextarea1">Example textarea</label>
             <textarea
               className="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
             />
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" className="btn btn-primary">Submit</button>
         </form>
       </div>
     );
