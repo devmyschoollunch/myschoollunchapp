@@ -3,60 +3,45 @@ import $ from "jquery";
 import CommonBuildParams from "../../scripts/JSmain";
 
 class PartsRegister extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      Firstname: null,
-      Lastname: null,
-      Username: null,
-      Email: null,
-      Address: null,
-      Address2: null,
-      USState: null,
-      Zipcode: null
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  state = {
+    firstname: "",
+    lastname: "",
+    username: "",
+    email: "",
+    address: "",
+    address2: "",
+    uSState: "",
+    zipcode: ""
+  };
 
-  handleSubmit(e) {
+  _onClick = e => {
     e.preventDefault();
     const s = this.state;
-
     var items = {
-      Firstname: s.Firstname,
-      Lastname: s.Lastname,
-      Username: s.Username,
-      Email: s.Email,
-      Address: s.Address,
-      Address2: s.Address2,
-      USState: s.USState,
-      Zipcode: s.Zipcode
+      firstname: s.firstname,
+      lastname: s.lastname,
+      username: s.username,
+      email: s.email,
+      address: s.address,
+      address2: s.address2,
+      uSState: s.uSState,
+      zipcode: s.zipcode
     };
-    alert(JSON.stringify(items));
 
     var data = items;
     $.post("http://localhost:60769/Home/About?data=" + JSON.stringify(data));
-  }
+  };
 
-  handleChange(event) {
-    let e = event.target;
+  _onChange = e => {
     this.setState({
-      Firstname: e.value,
-      Lastname: e.value,
-      Username: e.value,
-      Email: e.value,
-      Address: e.value,
-      Address2: e.value,
-      USState: e.value,
-      Zipcode: e.value
+      [e.target.name]: e.target.value
     });
-  }
+  };
+
   render() {
     return (
       <div>
-        <form className="className=" form-signin>
-          {" "}
+        <div>
           <div className="py-5 text-center">
             <h2>Register</h2>
             <p className="lead">
@@ -69,20 +54,22 @@ class PartsRegister extends Component {
               <div className="row">
                 <div className="col-md-6 mb-3">
                   <input
-                    value={this.state.value}
-                    onChange={this.handleChange}
+                    name="firstname"
+                    value={this.state.firstname}
+                    onChange={e => this._onChange(e)}
                     className="form-control"
                     placeholder="First name"
                     type="text"
                     maxLength="100"
                     required
-                    autofocus
+                    autoFocus
                   />
                 </div>
                 <div className="col-md-6 mb-3">
                   <input
-                    value={this.state.value}
-                    onChange={this.handleChange}
+                    name="lastname"
+                    value={this.state.lastname}
+                    onChange={e => this._onChange(e)}
                     className="form-control"
                     placeholder="Last name"
                     type="text"
@@ -95,8 +82,9 @@ class PartsRegister extends Component {
               <div className="mb-3">
                 <div className="input-group">
                   <input
-                    value={this.state.value}
-                    onChange={this.handleChange}
+                    name="username"
+                    value={this.state.username}
+                    onChange={e => this._onChange(e)}
                     className="form-control"
                     placeholder="Username"
                     type="text"
@@ -108,8 +96,9 @@ class PartsRegister extends Component {
 
               <div className="mb-3">
                 <input
-                  value={this.state.value}
-                  onChange={this.handleChange}
+                  name="email"
+                  value={this.state.email}
+                  onChange={e => this._onChange(e)}
                   className="form-control"
                   placeholder="Email"
                   type="email"
@@ -120,8 +109,9 @@ class PartsRegister extends Component {
 
               <div className="mb-3">
                 <input
-                  value={this.state.value}
-                  onChange={this.handleChange}
+                  name="address"
+                  value={this.state.address}
+                  onChange={e => this._onChange(e)}
                   className="form-control"
                   placeholder="Address"
                   type="text"
@@ -132,8 +122,9 @@ class PartsRegister extends Component {
 
               <div className="mb-3">
                 <input
-                  value={this.state.value}
-                  onChange={this.handleChange}
+                  name="address2"
+                  value={this.state.address2}
+                  onChange={e => this._onChange(e)}
                   className="form-control"
                   placeholder="P.O. Box / Apt #"
                   type="text"
@@ -144,8 +135,9 @@ class PartsRegister extends Component {
               <div className="row">
                 <div className="col-md-4 mb-3">
                   <select
-                    value={this.state.value}
-                    onChange={this.handleChange}
+                    name="uSState"
+                    value={this.state.uSState}
+                    onChange={e => this._onChange(e)}
                     className="custom-select mr-sm-2"
                     required
                   >
@@ -205,8 +197,9 @@ class PartsRegister extends Component {
                 </div>
                 <div className="col-md-3 mb-3">
                   <input
-                    value={this.state.value}
-                    onChange={this.handleChange}
+                    name="zipcode"
+                    value={this.state.zipcode}
+                    onChange={e => this._onChange(e)}
                     className="form-control"
                     placeholder="Zip code"
                     type="text"
@@ -218,13 +211,13 @@ class PartsRegister extends Component {
             </div>
           </div>
           <button
-            onClick={this.handleSubmit}
-            type="submit"
+            onClick={this._onClick}
+            // type="submit"
             className="btn btn-lg btn-primary btn-block"
           >
             Register
           </button>
-        </form>
+        </div>
       </div>
     );
   }

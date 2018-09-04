@@ -7,24 +7,25 @@ class PartsSignin extends Component {
     password: ""
   };
 
+  _onClick = e => {
+    e.preventDefault();
+    const s = this.state;
+
+    var items = {
+      email: s.email,
+      password: s.password
+    };
+
+    var data = items;
+    $.post("http://localhost:60769/Home/About?data=" + JSON.stringify(data));
+  };
+
   _onChange = e => {
     this.setState({
       [e.target.name]: e.target.value
     });
   };
 
-  _onClick = e => {
-    e.preventDefault();
-
-    var items = {
-      email: this.state.email,
-      password: this.state.password
-    };
-
-    var data = items;
-    alert(JSON.stringify(items));
-    $.post("http://localhost:60769/Home/About?data=" + JSON.stringify(data));
-  };
   render() {
     return (
       <div>
