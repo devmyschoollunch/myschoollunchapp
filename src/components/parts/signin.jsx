@@ -34,7 +34,7 @@ class PartsSignin extends Component {
             name="email"
             value={this.state.email}
             onChange={e => this._onChange(e)}
-            type="text"
+            type="email"
             className="form-control"
             placeholder="Email address"
             required
