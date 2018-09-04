@@ -5,8 +5,6 @@ import PartsRegister from "../parts/register";
 class PartsSignin extends Component {
   constructor(props) {
     super(props);
-    //this.state = {showComponent: false};
-
     this.state = { showingToggle: false };
     this._onButtonClick = this._onButtonClick.bind(this);
   }

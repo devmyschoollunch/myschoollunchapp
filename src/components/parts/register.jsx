@@ -29,7 +29,7 @@ class PartsRegister extends Component {
     };
 
     var data = JSON.stringify(items);
-    alert(data);
+    //alert(data);
     $.post("http://localhost:60769/Home/About?data=" + data);
   };
 
