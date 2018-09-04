@@ -10,7 +10,7 @@ class PartsRegister extends Component {
     email: "",
     address: "",
     address2: "",
-    uSState: "",
+    usState: "",
     zipcode: ""
   };
 
@@ -24,12 +24,13 @@ class PartsRegister extends Component {
       email: s.email,
       address: s.address,
       address2: s.address2,
-      uSState: s.uSState,
+      usState: s.usState,
       zipcode: s.zipcode
     };
 
-    var data = items;
-    $.post("http://localhost:60769/Home/About?data=" + JSON.stringify(data));
+    var data = JSON.stringify(items);
+    //alert(data)
+    $.post("http://localhost:60769/Home/About?data=" + data);
   };
 
   _onChange = e => {
@@ -135,8 +136,8 @@ class PartsRegister extends Component {
               <div className="row">
                 <div className="col-md-4 mb-3">
                   <select
-                    name="uSState"
-                    value={this.state.uSState}
+                    name="usState"
+                    value={this.state.usState}
                     onChange={e => this._onChange(e)}
                     className="custom-select mr-sm-2"
                     required

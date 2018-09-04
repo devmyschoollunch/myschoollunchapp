@@ -19,7 +19,7 @@ class PagesHome extends Component {
             </p>
           </div>
         </section> */}
-         {/* <PartsSignin /> */}
+         <PartsSignin />
         <PartsRegister />
       </div>
     );

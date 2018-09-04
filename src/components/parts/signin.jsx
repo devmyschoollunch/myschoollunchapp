@@ -16,8 +16,10 @@ class PartsSignin extends Component {
       password: s.password
     };
 
-    var data = items;
-    $.post("http://localhost:60769/Home/About?data=" + JSON.stringify(data));
+   
+    var data = JSON.stringify(items);
+    //alert(data)
+    $.post("http://localhost:60769/Home/About?data=" + data);
   };
 
   _onChange = e => {
