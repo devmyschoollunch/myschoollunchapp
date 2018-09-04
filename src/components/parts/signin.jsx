@@ -1,11 +1,26 @@
 import React, { Component } from "react";
 import $ from "jquery";
+import PartsRegister from "../parts/register";
 
 class PartsSignin extends Component {
+  constructor(props) {
+    super(props);
+    //this.state = {showComponent: false};
+
+    this.state = { showingToggle: false };
+    this._onButtonClick = this._onButtonClick.bind(this);
+  }
   state = {
     email: "",
     password: ""
   };
+  _onButtonClick(e) {
+    e.preventDefault();
+
+    this.setState({
+      showComponent: true
+    });
+  }
 
   _onClick = e => {
     e.preventDefault();
@@ -16,7 +31,6 @@ class PartsSignin extends Component {
       password: s.password
     };
 
-   
     var data = JSON.stringify(items);
     //alert(data)
     $.post("http://localhost:60769/Home/About?data=" + data);
@@ -29,6 +43,7 @@ class PartsSignin extends Component {
   };
 
   render() {
+    const { showingToggle } = this.state;
     return (
       <div>
         <form className="form-signin">
@@ -38,7 +53,7 @@ class PartsSignin extends Component {
             value={this.state.email}
             onChange={e => this._onChange(e)}
             type="email"
-            className="form-control"
+            className="form-control m20"
             placeholder="Email address"
             required
             autoFocus
@@ -61,10 +76,20 @@ class PartsSignin extends Component {
           >
             Sign in
           </button>
-          <p />
+          {/*   <p />
           <a href="#" className="btn btn-secondary btn-sm m-2">
             New? Register >>
-          </a>
+          </a> */}
+
+          <div>
+            <button
+              className="btn btn-secondary btn-sm m-2"
+              onClick={this._onButtonClick}
+            >
+              New? Register &raquo;
+            </button>
+            {this.state.showComponent ? <PartsRegister /> : null}
+          </div>
         </form>
       </div>
     );

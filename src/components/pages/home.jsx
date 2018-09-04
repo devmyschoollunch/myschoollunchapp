@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import PartsSignin from "../parts/signin";
 import PartsRegister from "../parts/register";
 import Counter from "../demo/counter";
@@ -20,7 +19,7 @@ class PagesHome extends Component {
           </div>
         </section> */}
          <PartsSignin />
-        <PartsRegister />
+        
       </div>
     );
   }
