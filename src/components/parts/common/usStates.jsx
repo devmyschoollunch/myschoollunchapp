@@ -1,26 +1,24 @@
 import React, { Component } from "react";
 
 class PartsCommonUSStates extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      USState: null
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     USState: null
+  //   };
+  //   this.handleChange = this.handleChange.bind(this);
+  // }
 
-  handleChange(event) {
-    let e = event.target;
-    this.setState({ USState: e.selectValue });
-    alert(this.state.USState);
-  }
+  // handleChange(event) {
+  //   let e = event.target;
+  //   this.setState({ USState: e.selectValue });
+  //   alert(this.state.USState);
+  // }
   render() {
     return (
       <div>
         <select
-          value={this.state.selectValue}
-          onChange={this.handleChange}
-          className="custom-select mr-sm-2"
+         
         >
           <option value="">Pick a State...</option>
           <option value="AL">Alabama</option>

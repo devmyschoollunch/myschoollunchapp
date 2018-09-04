@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import PartsSignin from "../parts/signin";
-import PartsRegister from "../parts/register";
-import Counter from "../demo/counter";
 
 class PagesHome extends Component {
   state = {};
   render() {
     return (
       <div className="container-fluid">
-        {/* <section className="jumbotron text-center">
+        <section className="jumbotron text-center">
           <div className="container">
             <h1 className="jumbotron-heading">Home</h1>
             <p className="lead text-muted">
@@ -17,9 +15,8 @@ class PagesHome extends Component {
               short so folks don't simply skip over it entirely.
             </p>
           </div>
-        </section> */}
-         <PartsSignin />
-        
+        </section>
+        <PartsSignin />
       </div>
     );
   }

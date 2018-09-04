@@ -5,9 +5,9 @@ class PagesAbout extends Component {
   render() {
     return (
       <div id="about">
-        <Router>
+        {/* <Router>
           <Link to={"/contact"}>Router Link</Link>
-        </Router>
+        </Router> */}
 
         <div>
           <h1 className="bd-title" id="content">

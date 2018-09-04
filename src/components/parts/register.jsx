@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import $ from "jquery";
-import CommonBuildParams from "../../scripts/JSmain";
+//import CommonBuildParams from "../../scripts/JSmain";
 
 class PartsRegister extends Component {
   state = {
@@ -29,7 +29,7 @@ class PartsRegister extends Component {
     };
 
     var data = JSON.stringify(items);
-    //alert(data)
+    alert(data);
     $.post("http://localhost:60769/Home/About?data=" + data);
   };
 
@@ -213,7 +213,6 @@ class PartsRegister extends Component {
           </div>
           <button
             onClick={this._onClick}
-            // type="submit"
             className="btn btn-lg btn-primary btn-block"
           >
             Register
