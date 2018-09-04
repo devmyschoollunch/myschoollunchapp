@@ -46,29 +46,33 @@ class PartsSignin extends Component {
     const { showingToggle } = this.state;
     return (
       <div>
-        <form className="form-signin">
+        <div className="form-signin">
           <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
-          <input
-            name="email"
-            value={this.state.email}
-            onChange={e => this._onChange(e)}
-            type="email"
-            className="form-control m20"
-            placeholder="Email address"
-            required
-            autoFocus
-          />
 
-          <input
-            name="password"
-            value={this.state.password}
-            onChange={e => this._onChange(e)}
-            type="password"
-            className="form-control"
-            placeholder="Password"
-            required
-          />
-
+          <div className="mb-3">
+            {" "}
+            <input
+              name="email"
+              value={this.state.email}
+              onChange={e => this._onChange(e)}
+              type="email"
+              className="form-control m20"
+              placeholder="Email address"
+              required
+              autoFocus
+            />
+          </div>
+          <div className="mb-3">
+            <input
+              name="password"
+              value={this.state.password}
+              onChange={e => this._onChange(e)}
+              type="password"
+              className="form-control"
+              placeholder="Password"
+              required
+            />
+          </div>
           <button
             className="btn btn-lg btn-primary btn-block"
             type="submit"
@@ -76,21 +80,15 @@ class PartsSignin extends Component {
           >
             Sign in
           </button>
-          {/*   <p />
-          <a href="#" className="btn btn-secondary btn-sm m-2">
-            New? Register >>
-          </a> */}
-
-          <div>
-            <button
-              className="btn btn-secondary btn-sm m-2"
-              onClick={this._onButtonClick}
-            >
-              New? Register &raquo;
-            </button>
-            {this.state.showComponent ? <PartsRegister /> : null}
-          </div>
-        </form>
+          <br />
+          <button
+            className="btn btn-secondary btn-sm"
+            onClick={this._onButtonClick}
+          >
+            New? Register &raquo;
+          </button>
+          {this.state.showComponent ? <PartsRegister /> : null}
+        </div>
       </div>
     );
   }

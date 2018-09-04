@@ -12,9 +12,9 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid">
-        {/* <LayoutHeader /> */}
+        <LayoutHeader />
         <LayoutBody />
-        {/* <LayoutFooter /> */}
+        <LayoutFooter />
       </div>
     );
   }
