@@ -1,18 +1,6 @@
 import React, { Component } from "react";
 import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
-//import Register from "./Register";
-
-//import SignUpForm from "./SignUpForm";
-
 class PagesContactUs extends Component {
-  validate(value) {
-    // alert("yo");r
-
-    return false;
-  }
-
-  _addByOne() {}
-
   render() {
     return (
       <div className="container">
@@ -57,14 +45,18 @@ class PagesContactUs extends Component {
             </select>
           </div>
           <div className="form-group">
-            <label htmlFor="exampleFormControlTextarea1">Example textarea</label>
+            <label htmlFor="exampleFormControlTextarea1">
+              Example textarea
+            </label>
             <textarea
               className="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
             />
           </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
         </form>
       </div>
     );

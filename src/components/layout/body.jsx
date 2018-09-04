@@ -11,11 +11,11 @@ class LayoutBody extends Component {
     return (
       <div className="container-fluid">
         <PagesHome />
-        <h1> </h1>
-        <PagesProducts />
-        <h1> </h1>
+        <hr></hr>
         <PagesAbout />
-        <h1> </h1>
+        <hr></hr>
+        <PagesProducts />
+        <hr></hr>
         <PagesContactUs />
         <hr></hr>
         <PagesTerms />

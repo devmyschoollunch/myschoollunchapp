@@ -9,11 +9,10 @@ class PagesAbout extends Component {
           <Link to={"/contact"}>Router Link</Link>
         </Router> */}
 
-        <div>
-          <h1 className="bd-title" id="content">
-            About
-          </h1>
-          <p className="bd-lead">
+        <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+          <h1 className="display-4">About</h1>
+
+          <p className="lead">
             Learn more about the team maintaining Bootstrap, how and why the
             project started, and how to get involved.
           </p>
