@@ -4,6 +4,10 @@ import LayoutHeader from "./components/layout/header";
 import LayoutFooter from "./components/layout/footer";
 import LayoutBody from "./components/layout/body";
 class App extends Component {
+  componentDidMount() {
+   // this._fecthData();
+   // console.log ( )
+  }
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.value !== this.props.value) {
       // ajax call, get more data
@@ -12,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <LayoutHeader />
+        {/* <LayoutHeader /> */}
         <LayoutBody />
         <LayoutFooter />
       </div>
