@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import PartsSignin from "../parts/signin";
 import PartsRegister from "../parts/register";
+import Counter from "../demo/counter";
 
 class PagesHome extends Component {
   state = {};
@@ -18,8 +19,9 @@ class PagesHome extends Component {
             </p>
           </div>
         </section> */}
-        <PartsSignin />
-        <PartsRegister />
+         <PartsSignin />
+        {/*
+        <PartsRegister /> */}
       </div>
     );
   }

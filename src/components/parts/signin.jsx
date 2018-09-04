@@ -2,56 +2,49 @@ import React, { Component } from "react";
 import $ from "jquery";
 
 class PartsSignin extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      Email: null,
-      Password: null
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  state = {
+    email: "",
+    password: ""
+  };
 
-  handleSubmit(e) {
-    const s = this.state;
+  _onChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  _onClick = e => {
     e.preventDefault();
 
     var items = {
-      Email: this.state.Email,
-      Password: this.state.Password
+      email: this.state.email,
+      password: this.state.password
     };
 
-    alert(JSON.stringify(items));
     var data = items;
+    alert(JSON.stringify(items));
     $.post("http://localhost:60769/Home/About?data=" + JSON.stringify(data));
-  }
-
-  handleChange(event) {
-    let e = event.target;
-    this.setState({
-      Email: e.value,
-      Password: e.value
-    });
-  }
-
+  };
   render() {
     return (
       <div>
         <form className="form-signin">
           <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
           <input
-            value={this.state.value}
-            onChange={this.handleChange}
-            type="email"
+            name="email"
+            value={this.state.email}
+            onChange={e => this._onChange(e)}
+            type="text"
             className="form-control"
             placeholder="Email address"
             required
-            autofocus
+            autoFocus
           />
 
           <input
-            value={this.state.value}
-            onChange={this.handleChange}
+            name="password"
+            value={this.state.password}
+            onChange={e => this._onChange(e)}
             type="password"
             className="form-control"
             placeholder="Password"
@@ -61,7 +54,7 @@ class PartsSignin extends Component {
           <button
             className="btn btn-lg btn-primary btn-block"
             type="submit"
-            onClick={this.handleSubmit}
+            onClick={e => this._onClick(e)}
           >
             Sign in
           </button>
