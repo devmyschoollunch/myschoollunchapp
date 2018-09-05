@@ -20,7 +20,7 @@ class PartsSignin extends Component {
     });
   }
 
-  validate = () => {
+  _validate = () => {
     if (this.state.email.length < 1) {
       return false;
     }
@@ -34,7 +34,7 @@ class PartsSignin extends Component {
   _onClickSubmit = e => {
     e.preventDefault();
 
-    const isValid = this.validate();
+    const isValid = this._validate();
 
     if (!isValid) {
       return;
