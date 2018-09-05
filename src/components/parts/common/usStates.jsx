@@ -17,9 +17,7 @@ class PartsCommonUSStates extends Component {
   render() {
     return (
       <div>
-        <select
-         
-        >
+        <select>
           <option value="">Pick a State...</option>
           <option value="AL">Alabama</option>
           <option value="AK">Alaska</option>

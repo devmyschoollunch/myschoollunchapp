@@ -8,8 +8,8 @@ class PagesProducts extends Component {
     return (
       <div>
         <PartsProductPricing />
-        <hr></hr>
-         <PartsProductCheckout />
+        <hr />
+        <PartsProductCheckout />
       </div>
     );
   }

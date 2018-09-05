@@ -9,7 +9,7 @@ class PagesHome extends Component {
         <section className="jumbotron text-center">
           <div className="container">
             <h1 className="jumbotron-heading">Home</h1>
-           
+
             {/* <p className="lead text-muted">
               Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam eaque ipsa,

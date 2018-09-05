@@ -20,7 +20,6 @@ class ListItem extends Component {
                 <ListItem />
               ))}
             </ul>
-
           }
         </div>
       );

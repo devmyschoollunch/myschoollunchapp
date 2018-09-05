@@ -18,8 +18,6 @@ class LayoutBody extends Component {
   //   };
   // }
 
-
-
   // componentDidMount() {
   //   console.log("counter " +this.counter);
 
