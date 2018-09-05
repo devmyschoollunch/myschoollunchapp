@@ -27,7 +27,7 @@ class PagesHome extends Component {
               qui dolorem eum fugiat, quo voluptas nulla pariatur?
             </p> */}
 
-            <p className="lead text-muted">
+            {/* <p className="lead text-muted">
               At vero eos et accusamus et iusto odio dignissimos ducimus, qui
               blanditiis praesentium voluptatum deleniti atque corrupti, quos
               dolores et quas molestias excepturi sint, obcaecati cupiditate
@@ -42,7 +42,7 @@ class PagesHome extends Component {
               earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
               voluptatibus maiores alias consequatur aut perferendis doloribus
               asperiores repellat…
-            </p>
+            </p> */}
           </div>
         </section>
         <PartsSignin />

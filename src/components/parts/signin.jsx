@@ -6,13 +6,13 @@ class PartsSignin extends Component {
   constructor(props) {
     super(props);
     this.state = { showingToggle: false };
-    this._onButtonClick = this._onButtonClick.bind(this);
+    this._onClickToggle = this._onClickToggle.bind(this);
+    this.state = {
+      email: "",
+      password: ""
+    };
   }
-  state = {
-    email: "",
-    password: ""
-  };
-  _onButtonClick(e) {
+  _onClickToggle(e) {
     e.preventDefault();
 
     this.setState({
@@ -20,8 +20,25 @@ class PartsSignin extends Component {
     });
   }
 
-  _onClick = e => {
+  validate = () => {
+    if (this.state.email.length < 1) {
+      return false;
+    }
+    if (this.state.password.length < 1) {
+      return false;
+    }
+
+    return true;
+  };
+
+  _onClickSubmit = e => {
     e.preventDefault();
+
+    const isValid = this.validate();
+
+    if (!isValid) {
+      return;
+    }
     const s = this.state;
 
     var items = {
@@ -30,7 +47,8 @@ class PartsSignin extends Component {
     };
 
     var data = JSON.stringify(items);
-    //alert(data)
+    console.log(data);
+
     $.post("http://localhost:60769/Home/About?data=" + data);
   };
 
@@ -48,7 +66,6 @@ class PartsSignin extends Component {
           <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
 
           <div className="mb-3">
-            {" "}
             <input
               name="email"
               value={this.state.email}
@@ -71,17 +88,18 @@ class PartsSignin extends Component {
               required
             />
           </div>
+
           <button
             className="btn btn-lg btn-primary btn-block"
             type="submit"
-            onClick={e => this._onClick(e)}
+            onClick={e => this._onClickSubmit(e)}
           >
             Sign in
           </button>
           <br />
           <button
             className="btn btn-secondary btn-sm"
-            onClick={this._onButtonClick}
+            onClick={this._onClickToggle}
           >
             New? Register &raquo;
           </button>

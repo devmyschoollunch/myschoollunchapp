@@ -3,18 +3,22 @@ import $ from "jquery";
 //import CommonBuildParams from "../../scripts/JSmain";
 
 class PartsRegister extends Component {
-  state = {
-    firstname: "",
-    lastname: "",
-    username: "",
-    email: "",
-    address: "",
-    address2: "",
-    usState: "",
-    zipcode: ""
-  };
+  constructor(props) {
+    super(props);
 
-  _onClick = e => {
+    this.state = {
+      firstname: "",
+      lastname: "",
+      username: "",
+      email: "",
+      address: "",
+      address2: "",
+      usState: "",
+      zipcode: ""
+    };
+  }
+
+  _onClickSubmit = e => {
     e.preventDefault();
     const s = this.state;
     var items = {
@@ -29,7 +33,7 @@ class PartsRegister extends Component {
     };
 
     var data = JSON.stringify(items);
-    //alert(data);
+    console.log(data);
     $.post("http://localhost:60769/Home/About?data=" + data);
   };
 
@@ -211,7 +215,7 @@ class PartsRegister extends Component {
           </div>
         </div>
         <button
-          onClick={this._onClick}
+          onClick={this._onClickSubmit}
           className="btn btn-lg btn-primary btn-block"
         >
           Register

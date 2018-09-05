@@ -6,35 +6,35 @@ import PagesTerms from "../pages/terms";
 import PagesProducts from "../pages/products";
 
 class LayoutBody extends Component {
-  state = {
-    counter: "aa"
-  };
+  // state = {
+  //   counter: "aa"
+  // };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLoading: true, //https://www.youtube.com/watch?v=VwiZBveJhq4&t=72s
-      conctacts: []
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     isLoading: true, //https://www.youtube.com/watch?v=VwiZBveJhq4&t=72s
+  //     conctacts: []
+  //   };
+  // }
 
 
 
-  componentDidMount() {
-    console.log("counter " +this.counter);
+  // componentDidMount() {
+  //   console.log("counter " +this.counter);
 
-    console.log("isLoading " + this.isLoading);
+  //   console.log("isLoading " + this.isLoading);
 
-    // this._fecthData();
-  }
-  componentWillUnmount() {
+  //   // this._fecthData();
+  // }
+  // componentWillUnmount() {
 
-  }
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.value !== this.props.value) {
-      // ajax call, get more data
-    }
-  }
+  // }
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevProps.value !== this.props.value) {
+  //     // ajax call, get more data
+  //   }
+  // }
   render() {
     return (
       <div className="container-fluid">
